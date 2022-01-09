@@ -76,7 +76,7 @@ function Register() {
             const users = await userActionsApi.getUsers();
             const user = users.find((user) => user.email === formitoState.email);
             if (!user && formitoState.email !== '' && formitoState.password !== '') {
-                const newUser: User = await userActionsApi.signUp({
+                await userActionsApi.signUp({
                     email: formitoState.email,
                     password: formitoState.password,
                 });

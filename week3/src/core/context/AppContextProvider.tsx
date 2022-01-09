@@ -1,5 +1,5 @@
-import React, { useEffect, useReducer } from 'react';
-import { User, UserAuthPayload } from '../../api/userActionModels';
+import React, { useEffect, useReducer, useRef } from 'react';
+import { User } from '../../api/userActionModels';
 import userActionsApi from '../../api/userActionsApi';
 import useAsyncProcess from '../network/async-process/useAsyncProcess';
 import AppContext, { appStateReducer, initialAppState } from './AppContext';
@@ -24,7 +24,6 @@ function AppContextProvider({ children }: AppContextProviderProps) {
             }
         })();
     }, []);
-
     return (
         <AppContext.Provider
             value={{
