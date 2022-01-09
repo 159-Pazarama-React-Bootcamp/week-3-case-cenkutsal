@@ -1,0 +1,17 @@
+.input-container {
+    display: flex;
+
+    width: min-content;
+}
+.input {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    background: #ffffff;
+    justify-content: center;
+    align-items: center;
+}
+.input::placeholder {
+    color: #bcbec0;
+}

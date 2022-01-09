@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+.page__container {
+    display: flex;
+    background: linear-gradient(90deg, #00b4db 0%, #0083b0 100%);
+    height: 1080px;
+}
+.child__left {
+    width: calc(100% / 3 * 2);
+    margin-left: 0;
+}
+.child__left-bg {
+    opacity: 0.1;
+    margin-left: -256px;
+}
+.form__container {
+    position: absolute;
+    top: 115px;
+    left: 150px;
+    height: 849px;
+    width: 1496px;
+    border-radius: 20px;
+    filter: drop-shadow(0px 4px 70px rgba(0, 0, 0, 0.1));
+    background: #fff;
+}
+.motorcyle-bg__container {
+    position: absolute;
+    pointer-events: none;
+    top: 115px;
+    left: 576px;
+}
+.form__logo {
+    left: calc(50% - 105px / 2 - 568.5px);
+    top: calc(50% - 29px / 2 - 292.5px);
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+    align-items: center;
+
+    color: #465685;
+}
+.form__h2 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 46px;
+    margin-top: 13px;
+    /* identical to box height */
+    align-items: center;
+
+    color: #414042;
+}
+.form__label {
+    line-height: 16px;
+    align-items: center;
+    color: #414042;
+    margin-bottom: 8px;
+}
+.form__input {
+    margin-bottom: 32px;
+    border: 1px solid #bcbec0;
+    box-sizing: border-box;
+    border-radius: 40px;
+    align-items: center;
+    padding-left: 22px;
+}
+
+.input--type--password {
+    margin-bottom: 17px;
+}
+.forgot-password__btn {
+    font-size: 10px;
+    line-height: 14px;
+    text-decoration: none;
+    color: #465685;
+    margin-bottom: 42px;
+}
+.bottom-content {
+    display: flex;
+    flex-direction: column;
+}
+.bottom-content__button-text {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+}
+.forgot-password__btn {
+    font-size: 10px;
+    line-height: 14px;
+    text-decoration: none;
+    color: #465685;
+    margin-bottom: 42px;
+}
