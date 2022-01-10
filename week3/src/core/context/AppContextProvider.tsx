@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useRef } from 'react';
+import React, { useEffect, useReducer, useRef, useState } from 'react';
 import { User } from '../../api/userActionModels';
 import userActionsApi from '../../api/userActionsApi';
 import useAsyncProcess from '../network/async-process/useAsyncProcess';
@@ -11,6 +11,7 @@ interface AppContextProviderProps {
 function AppContextProvider({ children }: AppContextProviderProps) {
     const [appState, dispatchAppStateAction] = useReducer(appStateReducer, initialAppState);
     const { state, runAsyncProcess } = useAsyncProcess<User>();
+    const [user, setUser] = useState();
     const userID = localStorage.getItem('userID');
     useEffect(() => {
         (async () => {
@@ -23,6 +24,13 @@ function AppContextProvider({ children }: AppContextProviderProps) {
                 console.log(error);
             }
         })();
+    }, []);
+    useEffect(() => {
+        const loggedInUserID = localStorage.getItem('userID');
+        if (loggedInUserID) {
+            const foundUser = JSON.parse(loggedInUserID);
+            setUser(foundUser);
+        }
     }, []);
     return (
         <AppContext.Provider
