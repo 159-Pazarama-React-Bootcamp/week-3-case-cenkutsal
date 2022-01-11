@@ -25,13 +25,6 @@ function AppContextProvider({ children }: AppContextProviderProps) {
             }
         })();
     }, []);
-    useEffect(() => {
-        const loggedInUserID = localStorage.getItem('userID');
-        if (loggedInUserID) {
-            const foundUser = JSON.parse(loggedInUserID);
-            setUser(foundUser);
-        }
-    }, []);
     return (
         <AppContext.Provider
             value={{
